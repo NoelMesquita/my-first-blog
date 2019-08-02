@@ -5,18 +5,18 @@
     <body>
         <div>
             <h1><a href="/">Blog Django Girls</a></h1>
-        </div>
+        </div>            
+
+        {% for post in posts %}
+            <div>
+                <p>publicado em: {{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr }}           
+            </div>
+        {% endfor %}
 
         <div>
-            {% for post in posts %}
-                {{ post }}
-            {% endfor %}
-        </div>
-
-        <div>
-            {% for post in posts %}
-                {{ post }}
-            {% endfor %}
+            
         </div>
     </body>
 </html>
